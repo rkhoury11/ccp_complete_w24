@@ -1,0 +1,181 @@
+/* main changes to introduce:
+mobile view will include the sliding nav tab
+tablet will have the tab always showing, and have it be considerably smaller than mobile view
+desktop view will also have it always showing, as well as use flex box for the content
+need to think about challenging feature for desktop view */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #00447E; /* Michigan blue */
+    color: white;
+    display: block;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    top: 0;
+    margin-left: 40px;
+    margin-bottom: 0;
+    font-weight: bold;
+    width: auto;
+    
+}
+
+.nav-bar {
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #00447E;
+    
+}
+
+.index-nav {
+    background-color: #FFCB05;
+}
+
+.pets-nav {
+    background-color: #FFCB05;
+}
+
+.recipes-nav {
+    background-color: #FFCB05;
+}
+
+.travel-nav {
+    background-color: #FFCB05;
+}
+
+#main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.intro {
+    font-size: 2vw;
+    text-align: left;
+}
+
+img {
+    width: 35%;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.umich-champs {
+    margin-top: 50px;
+}
+
+.nav-bar .active {
+    background-color: #00447E; /* Darker blue for active tab */
+}
+
+.nav-bar .active a{
+    color: #FFFFFF; /* Darker blue for active tab */
+    text-decoration: underline;
+    pointer-events: none;
+    cursor: default;
+}
+
+.skip-to-hidden {
+    position: absolute!important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    display: block;
+    text-align: center;
+}
+
+.skip-to-hidden:focus {
+    position: static!important;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    margin-top: 122px;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Disable animations */
+    
+    .animated-element {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+header {
+    position: relative;
+    transition: left 0.3s ease; 
+}
+
+.sidebar.active + header {
+    left: 250px;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px; 
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+    
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: 125px 1fr;
+    }
+    #main {
+        margin-top: 100px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        /* display: flex;
+        flex-direction: column; */
+    }
+
+    .sidebar {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .skip-to-hidden:focus {
+        position: static!important;
+        overflow: visible;
+        width: 100%;
+        height: auto;
+        background-color: #FFFFFF;
+        grid-column: 2/3;
+        pointer-events: auto;
+        z-index: 100000000;
+        margin-top: 122px;
+    
+    }
+
+  }
+
+@media only screen and (min-width: 1000px) {
+    #main {
+        /* flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; */
+        
+    }
+
+    main > div {
+        /* width: 45%; */
+    }
+}

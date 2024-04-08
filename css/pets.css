@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #00447E; /* Michigan blue */
+    color: white;
+    display: block;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    top: 0;
+    margin-left: 40px;
+    font-weight: bold;
+    width: auto;
+}
+
+.nav-bar {
+    /* background-color: #FFCB05; Michigan maize */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    
+    background-color: #00447E;
+    
+}
+
+.index-nav {
+    background-color: #FFCB05;
+}
+
+.pets-nav {
+    background-color: #FFCB05;
+}
+
+.recipes-nav {
+    background-color: #FFCB05;
+}
+
+.travel-nav {
+    background-color: #FFCB05;
+}
+
+#main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.nav-bar .active {
+    background-color: #00447E; 
+}
+
+.nav-bar .active a{
+    color: #FFFFFF; 
+    text-decoration: underline;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* #flexToggle {
+    width:fit-content;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+} */
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+img {
+    width: 35%;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.main-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.photo-div {
+    border: 3px solid #00274C;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content-div {
+    border: 3px solid #00274C;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+main div div ul{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.skip-to-hidden {
+    position: absolute!important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    display: block;
+    text-align: center;
+}
+
+.skip-to-hidden:focus {
+    position: static!important;
+    overflow: visible;
+    margin-top: 122px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Disable animations */
+    /* Example: */
+    .animated-element {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  header {
+    position: relative;
+    transition: left 0.3s ease; 
+}
+
+.sidebar.active + header {
+    left: 250px;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px; 
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+}
+
+#flexToggle {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: 125px 1fr;
+    }
+    #main {
+        margin-top: 100px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main > div {
+        background-color: #FFCB05;
+    }
+
+    .sidebar {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .skip-to-hidden:focus {
+        position: static!important;
+        overflow: visible;
+        width: 100%;
+        height: auto;
+        background-color: #FFFFFF;
+        grid-column: 2/3;
+        pointer-events: auto;
+        z-index: 100000000;
+        margin-top: 122px;
+    
+    }
+
+    #flexToggle {
+        display: none;
+        margin: auto;
+        font-size: 15px;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: #FFCB05;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+  }
+
+@media only screen and (min-width: 1000px) {
+    #main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+    main > div {
+        width: 45%;
+    }
+
+    #flexToggle {
+        display: inline-block;
+        margin: auto;
+        border-radius: 30px;
+        background-color: #FFCB05;
+        cursor: pointer;
+        
+    }
+}

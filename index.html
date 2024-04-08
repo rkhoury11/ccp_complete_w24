@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <title>Index Page</title>
+</head>
+<body>
+    <a href="#main" class="skip-to-hidden" tabindex="1">Skip to Main Content</a>
+    <header>
+
+        <div class="nav-bar">
+            <img src="images/Hamburger_icon.png" alt="Sidebar icon" class="nav-toggle" onclick="toggleSidebar()" onkeydown="handleKeyPress(event)" tabindex="0">
+            <h1>Rafael Khoury</h1>
+        </div>
+
+        <!-- <h1>Rafael Khoury</h1> -->
+
+        <div id="sidebar" class="sidebar">
+            <nav>
+                <ul>
+                    <li class="index-nav active"><a href="index.html">Home</a></li>
+                    <li class="pets-nav"><a href="pets.html">Pets</a></li>
+                    <li class="recipes-nav"><a href="recipes.html">Recipes</a></li>
+                    <li class="travel-nav"><a href="travel.html">Travel</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <div>
+            <p class="intro">Welcome to my webpage, where you can browse through pets, recipes, and travel destinations, as you wish. But first, I had to leave this beautiful picture down here just as a reminder that we are national champions, in case anyone forgot. </p>
+
+        </div>
+
+        <div class="umich-champs"><img src="images/michigan-champs.jpg" alt="Michigan national champs"></div>
+            
+            <!-- Jackie Wolf -->
+    
+    </main>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
